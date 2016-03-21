@@ -1,0 +1,19 @@
+
+
+<h1>LongestWord Game</h1>
+
+
+<%= @grid %>
+
+
+<br>
+<br>
+<br>
+
+<form action="/score">
+  <label for="question">What's your best shot?</label>
+  <input type="text" id="question" name="user_input" placeholder="What word do you see?">
+  <input type="hidden" name="grid" value="<%= @grid.join("") %>">
+  <input type="hidden" name="start_time" value="<%= Time.now %>">
+  <input type="submit" value="Check!" class="btn btn-primary">
+</form>
